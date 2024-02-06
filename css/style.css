@@ -3,7 +3,70 @@ Make the font larger too.*/
 body{
 	margin:1%;
 	font-size:125%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Improve readability */
+    line-height: 1.6; /* Enhance text readability */
+    padding: 1rem; /* Add more padding for better spacing */
+    background: #f4f4f4; /* Light background to ease eye strain */
+
 }
+
+
+/*navigation Bar*/
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #333; /* Neutral color for better contrast */
+    padding: 0.75rem;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+.active a {
+    background: #0056b3; /* Darker shade for active/hover states */
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*Skip to main content link*/
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    overflow: visible;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+/*grid layout*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
@@ -23,14 +86,22 @@ h1{
 
 /*Style the images*/
 img{
-    height: 150px;
+    height:auto;
 	width:auto;
+	max-width: 100%;
     border: 3px solid blue;
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 5px;
-	margin-left: 10%
+	margin-left: 5%
 }
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: for styled image borders */
+}
+
 
 /*Make the h2 heading match h1*/
 h2{
@@ -51,17 +122,34 @@ header, nav, main, footer{
 }
 
 
-/*Change the styling for all of the list 
-items in the nav section*/
-nav ul li{
-	background-color: #ECFF4D;
-	padding:10px;
-	width:25%;
-	border:1px solid black;
-	display: inline-block;
-	width: 20%;
-}
+
 
 /*Added this so the links stay the same color*/
 a:visited{color:#0000FF}
+
+/*media queries for mobile devices*/
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+		padding: 10px 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+}
+
+/*reduced motion preference*/
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
 
