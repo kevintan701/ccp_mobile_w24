@@ -1,12 +1,16 @@
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
-body{
-	margin:1%;
-	font-size:125%;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Improve readability */
-    line-height: 1.6; /* Enhance text readability */
-    padding: 1rem; /* Add more padding for better spacing */
-    background: #f4f4f4; /* Light background to ease eye strain */
+body {
+	margin: 1%;
+	font-size: 125%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* Improve readability */
+	line-height: 1.6;
+	/* Enhance text readability */
+	padding: 1rem;
+	/* Add more padding for better spacing */
+	background: #f4f4f4;
+	/* Light background to ease eye strain */
 
 }
 
@@ -14,170 +18,190 @@ body{
 /*navigation Bar*/
 
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0;
 }
 
 nav ul li a {
-    color: #333; /* Neutral color for better contrast */
-    padding: 0.75rem;
-    display: block;
+	color: #333;
+	/* Neutral color for better contrast */
+	padding: 0.75rem;
+	display: block;
 	margin: 10px;
 }
 
 nav ul li a:hover,
 nav ul li a:focus,
 .active a {
-    background: #73a8e0; /* Darker shade for active/hover states */
-    color: white;
-    text-decoration: none;
+	background: #73a8e0;
+	/* Darker shade for active/hover states */
+	color: white;
+	text-decoration: none;
 }
 
-nav ul li a.active, nav ul li a:hover, nav ul li a:focus {
-    border-bottom: 3px solid #73a8e0; /* Adds a visual cue for active state */
-    font-weight: bold; /* Increases visibility */
+nav ul li a.active,
+nav ul li a:hover,
+nav ul li a:focus {
+	border-bottom: 3px solid #73a8e0;
+	/* Adds a visual cue for active state */
+	font-weight: bold;
+	/* Increases visibility */
 }
 
 
 /*Skip to main content link*/
 .skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-	z-index: 100; /* Ensures it's above other content */
-    background-color: #000; /* High contrast for visibility */
-    color: #fff;
-    padding: 8px;
+	position: absolute;
+	left: -999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: 100;
+	/* Ensures it's above other content */
+	background-color: #000;
+	/* High contrast for visibility */
+	color: #fff;
+	padding: 8px;
 }
 
 .skip-link:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 10px;
-    overflow: visible;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 10px;
+	overflow: visible;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #000;
 }
 
 /*grid layout*/
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1rem;
+	padding: 1rem;
 }
 
 
 
 
 /*Make the h1 heading bigger with a bold font*/
-h1{
-	font-size: 2em; 
+h1 {
+	font-size: 2em;
 	font-weight: bold;
 }
 
-.active{
+.active {
 	background: white;
-    text-transform: uppercase;
+	text-transform: uppercase;
 	text-align: center;
 }
 
-.active a{
-	text-decoration: none;;
+.active a {
+	text-decoration: none;
+	;
 }
 
 /*Style the images*/
-img{
-    height:auto;
-	width:40%;
+img {
+	height: auto;
+	width: 40%;
 	/*max-width: 100%;*/
-    border: 3px solid blue;
-    padding: 25px;
-    border-radius: 60%;
-    margin-left: 30%;
+	border: 3px solid blue;
+	padding: 25px;
+	border-radius: 60%;
+	margin-left: 30%;
 }
 
 
 video {
-    height:auto;
-	width:40%;
+	height: auto;
+	width: 40%;
 	/*max-width: 100%;*/
-    border: 3px solid blue;
-    padding: 25px;
-    margin-left: 30%;
+	border: 3px solid blue;
+	padding: 25px;
+	margin-left: 30%;
 }
+
 .grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px; /* Optional: for styled image borders */
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	/* Optional: for styled image borders */
 }
 
 
 
 /*Make the h2 heading match h1*/
-h2{
-	font-size: 2em; 
+h2 {
+	font-size: 2em;
 	font-weight: bold;
 }
 
 /*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
+p,
+h1,
+h2 {
+	padding: 10px;
 	margin: 10px;
 }
 
-li{
+li {
 	margin: 5%;
 }
 
 /*Add borders around the main components and some
 space too*/
-header, nav, main, footer{
+/* header,
+nav,
+main,
+footer {
 	border: 3px solid red;
 	margin: 10px 5px;
-}
+} */
 
 
 
 /*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
+a:visited {
+	color: #0000FF
+}
 
 /*media queries for mobile devices*/
 @media only screen and (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    nav ul li a{
-        width: 100%;
-        text-align: center;
+	nav ul li a {
+		width: 100%;
+		text-align: center;
 		padding: 15px;
 		margin: 4%;
-    }
+	}
 
 
 
-    body {
-        font-size: 100%; /* Adjusts font size for mobile readability */
-    }
-    .grid-container {
-        grid-template-columns: 1fr; /* Stack items on small screens */
-    }
+	body {
+		font-size: 100%;
+		/* Adjusts font size for mobile readability */
+	}
+
+	.grid-container {
+		grid-template-columns: 1fr;
+		/* Stack items on small screens */
+	}
 }
 
 /*reduced motion preference*/
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none;
-        transition: none;
-    }
+	* {
+		animation: none;
+		transition: none;
+	}
 }
-
