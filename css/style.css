@@ -4,6 +4,7 @@ body {
 	margin: 1%;
 	font-size: 125%;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #333;
 	/* Improve readability */
 	line-height: 1.6;
 	/* Enhance text readability */
@@ -45,8 +46,10 @@ nav ul li a.active,
 nav ul li a:hover,
 nav ul li a:focus {
 	border-bottom: 3px solid #73a8e0;
+	color: white;
 	/* Adds a visual cue for active state */
 	font-weight: bold;
+	text-decoration: underline;
 	/* Increases visibility */
 }
 
@@ -55,6 +58,7 @@ nav ul li a:focus {
 .skip-link {
 	position: absolute;
 	left: -999px;
+	transition: left 0.3s ease-in-out;
 	top: auto;
 	width: 1px;
 	height: 1px;
@@ -68,6 +72,8 @@ nav ul li a:focus {
 }
 
 .skip-link:focus {
+	left: 0;
+	z-index: 1000;
 	position: static;
 	width: auto;
 	height: auto;
@@ -82,7 +88,7 @@ nav ul li a:focus {
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	gap: 1rem;
+	gap: 20px;
 	padding: 1rem;
 }
 
@@ -91,7 +97,7 @@ nav ul li a:focus {
 
 /*Make the h1 heading bigger with a bold font*/
 h1 {
-	font-size: 2em;
+	font-size: 3em;
 	font-weight: bold;
 }
 
@@ -107,30 +113,26 @@ h1 {
 }
 
 /*Style the images*/
-img {
-	height: auto;
-	width: auto;
-	/*max-width: 100%;*/
-	border: 3px solid blue;
-	padding: 25px;
-	border-radius: 60%;
-	margin-left: 0%;
+img{
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 15% auto; /* Center align media */
+    border-radius: 60%;
 }
 
-
 video {
-	height: auto;
-	width: auto;
-	/*max-width: 100%;*/
-	border: 3px solid blue;
-	padding: 25px;
-	margin-left: 0%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 15% auto; /* Center align media */
 }
 
 .grid-item img {
 	width: 100%;
 	height: auto;
 	border-radius: 20px;
+	border: 3px solid #73a8e0;
 	/* Optional: for styled image borders */
 }
 
@@ -145,9 +147,10 @@ h2 {
 /*Improve the spacing for paragraphs AND headings*/
 p,
 h1,
-h2 {
+h2,
+h3 {
 	padding: 10px;
-	margin: 10px;
+	margin: 4%;
 }
 
 li {
@@ -156,13 +159,20 @@ li {
 
 /*Add borders around the main components and some
 space too*/
-/* header,
-nav,
-main,
-footer {
-	border: 3px solid red;
-	margin: 10px 5px;
-} */
+
+header, nav, main, footer {
+    border: none; /* Consider removing borders for a cleaner look */
+    margin: 10px 0;
+    padding: 20px;
+}
+
+/* Use a cohesive color scheme */
+header, footer {
+    background-color: #73a8e0;
+    color: white;
+    text-align: center;
+}
+
 
 
 
