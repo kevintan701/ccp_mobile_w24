@@ -46,10 +46,17 @@ nav ul {
 }
 
 nav ul li a {
-	color: #333;
+	color: white;
 	padding: 0.75rem;
 	display: block;
 	margin: 10px;
+	text-decoration: none;
+}
+
+nav{
+	background: #73a8e0;
+	font-size: 3rem;
+	text-decoration: underline;
 }
 
 nav ul li a:hover,
@@ -59,29 +66,29 @@ nav ul li a.active {
 	color: white;
 	text-decoration: none;
 	border-bottom: 3px solid #73a8e0;
+	border-radius: 4px;
 	font-weight: bold;
-	text-decoration: underline;
 }
 
 /* Headings and Text */
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-weight: bold;
 	padding: 10px;
 	margin: 4%;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2rem;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.75rem;
 }
 
-/* Links */
-a:visited {
-	color: #0000FF;
+h3 {
+	font-size: 1.5rem;
 }
+
 
 /* Main Components Styling */
 header, nav, main, footer {
@@ -103,11 +110,11 @@ header, nav, main, footer {
 
 /* Media Elements */
 img, video {
-	width: auto;
+	max-width: 100%;
 	height: auto;
 	display: block;
 	margin: 15% auto;
-	border-radius: 60%;
+	border-radius: 70%;
 }
 
 .grid-item img {
@@ -120,6 +127,7 @@ img, video {
 /* Lists */
 li {
 	margin: 5%;
+	text-align: left;
 }
 
 /* Media Queries */
