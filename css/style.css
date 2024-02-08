@@ -15,14 +15,14 @@ body {
 .skip-link {
 	position: fixed;
 	/* Changed to fixed to ensure visibility */
-	top: -80px;
+	top: 0px;
 	/* Adjusted for better off-screen positioning */
 	left: 0;
 	background-color: #ffffff;
 	color: #fff;
 	padding: 8px;
 	z-index: 100;
-	transition: top 5s ease-in-out;
+	transition: top 0.3s ease-in-out;
 }
 
 .skip-link:focus {
