@@ -144,6 +144,11 @@ video {
 	text-align: center;
 }
 
+p {
+
+	text-align: left;
+}
+
 .gallery {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
@@ -173,12 +178,12 @@ video {
 	/* Remove default padding */
 }
 
-.my-list li, p{
+.my-list li{
 	text-align: left;
 }
 
 /* Media Queries */
-@media only screen and (max-width: 600px) {
+@media screen and (min-width: 680px) {
 	/* nav ul {
 		flex-direction: column;
 	} */
@@ -204,10 +209,11 @@ video {
 		align-items: stretch;
 	}
 
-	.grid-container {
-		grid-template-columns: 1fr;
-		/* Single column layout for smaller screens */
+	.my-list li{
+		flex-direction: column;
 	}
+
+
 }
 
 /* Reduced Motion Preference */
