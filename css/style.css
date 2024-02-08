@@ -1,168 +1,135 @@
 /* Global Styles */
 body {
-	margin: 1%;
-	font-size: 125%;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #333;
-	line-height: 1.6;
-	padding: 1rem;
-	background: #f4f4f4;
+    margin: 0; /* Updated to remove unnecessary spacing around the body */
+    font-size: 18px; /* Adjusted for better readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 1rem;
+    background: #f4f4f4;
 }
 
 /* Skip to Main Content Link */
 .skip-link {
-	position: absolute;
-	left: -999px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	z-index: 100;
-	background-color: #000;
-	color: #fff;
-	padding: 8px;
-	transition: left 0.3s ease-in-out;
+    position: fixed; /* Changed to fixed to ensure visibility */
+    top: -40px; /* Adjusted for better off-screen positioning */
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 2000; /* Increased z-index to ensure it's above all other elements */
+    transition: top 0.3s ease-in-out;
 }
 
 .skip-link:focus {
-	left: 0;
-	position: static;
-	width: auto;
-	height: auto;
-	margin: 10px;
-	overflow: visible;
-	color: #000;
-	background-color: #fff;
-	border: 1px solid #000;
-	z-index: 1000;
+    top: 0; /* Updated to bring the link into view when focused */
 }
 
 /* Navigation Bar */
-nav ul {
-	display: flex;
-	justify-content: space-around;
-	list-style: none;
-	padding: 0;
+header{
+	position: sticky; /* Changed to sticky for better navigation */
+	top: 0; /* Positioned at the top */
+	z-index: 100; /* Increased z-index to ensure it's above all other elements */
+	border: solid white 2px; /* Added border for visual separation */
 }
 
-nav ul li a {
-	color: white;
-	padding: 0.75rem;
-	display: block;
-	margin: 10px;
-	text-decoration: none;
+nav {
+    background: #73a8e0;
+    padding: 0.5rem 0; /* Adjusted padding for better spacing */
 }
 
-nav{
-	background: #73a8e0;
-	font-size: 3rem;
-	text-decoration: underline;
+ul {
+    display: flex;
+    justify-content: center; /* Centered nav items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li a:hover,
-nav ul li a:focus,
-nav ul li a.active {
-	background: #73a8e0;
-	color: white;
-	text-decoration: none;
-	border-bottom: 3px solid #73a8e0;
-	border-radius: 4px;
-	font-weight: bold;
+li a {
+    color: white;
+    padding: 14px 20px; /* Increased padding for larger clickable area */
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem; /* Adjusted font size for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+li:first-child {
+    margin-right: auto; /* Adjusted to ensure the first item aligns left */
+}
+
+li:not(:first-child) {
+    border-left: 2px solid white; /* Added border to non-first items for visual separation */
+}
+
+li a:hover, li a:focus, li a.active {
+    background: #538ab0; /* Lightened background on hover/focus for contrast */
+    text-decoration: underline; /* Added underline for better indication of interactivity */
+    border-radius: 4px; /* Rounded corners for aesthetic */
 }
 
 /* Headings and Text */
 h1, h2, h3, h4 {
-	font-weight: bold;
-	padding: 10px;
-	margin: 4%;
+    font-weight: bold;
+    margin: 1rem 0; /* Standardized margin for visual consistency */
 }
 
 h1 {
-	font-size: 2rem;
+    font-size: 2.5rem; /* Made primary heading larger for emphasis */
 }
 
 h2 {
-	font-size: 1.75rem;
+    font-size: 2rem;
 }
 
 h3 {
-	font-size: 1.5rem;
+    font-size: 1.75rem;
 }
-
 
 /* Main Components Styling */
-header, nav, main, footer {
-	border: none;
-	margin: 10px 0;
-	padding: 20px;
-	background-color: #73a8e0;
-	color: white;
-	text-align: center;
-}
-
-/* Grid Layout */
-.grid-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	gap: 20px;
-	padding: 1rem;
+footer, main {
+    background-color: #73a8e0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Added margin-top for spacing */
 }
 
 /* Media Elements */
 img, video {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	margin: 15% auto;
-	border-radius: 70%;
-	border: solid 3px white;
-}
-
-.grid-item img {
-	width: 100%;
-	height: auto;
-	border-radius: 20px;
-	border: 3px solid #73a8e0;
-}
-
-/* Lists */
-li {
-	margin: 5%;
-	text-align: left;
+    max-width: 100%; /* Ensured max-width for responsiveness */
+    height: auto;
+    border-radius: 8px; /* Softened border radius */
+    border: 3px solid white; /* Standardized border */
+    margin: 20px 0; /* Added margin for spacing */
+	text-align: center;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
-	body {
-		font-size: 100%;
-	}
+    nav ul {
+        flex-direction: column;
+    }
 
-	nav ul {
-		flex-direction: column;
-		align-items: center;
-	}
+    nav ul li a {
+        width: 100%;
+        padding: 10px; /* Adjusted padding for touch targets */
+    }
 
-	nav ul li a {
-		width: 100%;
-		text-align: center;
-		padding: 15px;
-		margin: 4%;
-	}
-	nav{
-		font-size: 32px;
-		font-weight: bold;
-	}
+    li a {
+        font-size: 1rem; /* Adjusted font size for space efficiency */
+    }
 
-
-	.grid-container {
-		grid-template-columns: 1fr;
-	}
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
 }
 
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation: none;
-		transition: none;
-	}
+    * {
+        animation: none;
+        transition: none;
+    }
 }
