@@ -1,135 +1,219 @@
 /* Global Styles */
 body {
-    margin: 0; /* Updated to remove unnecessary spacing around the body */
-    font-size: 18px; /* Adjusted for better readability */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    padding: 1rem;
-    background: #f4f4f4;
+	margin: 0;
+	/* Updated to remove unnecessary spacing around the body */
+	font-size: 18px;
+	/* Adjusted for better readability */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #333;
+	line-height: 1.6;
+	padding: 1rem;
+	background: #f4f4f4;
 }
 
 /* Skip to Main Content Link */
 .skip-link {
-    position: fixed; /* Changed to fixed to ensure visibility */
-    top: -40px; /* Adjusted for better off-screen positioning */
-    left: 0;
-    background-color: #000;
-    color: #fff;
-    padding: 8px;
-    z-index: 2000; /* Increased z-index to ensure it's above all other elements */
-    transition: top 0.3s ease-in-out;
+	position: fixed;
+	/* Changed to fixed to ensure visibility */
+	top: -80px;
+	/* Adjusted for better off-screen positioning */
+	left: 0;
+	background-color: #ffffff;
+	color: #fff;
+	padding: 8px;
+	z-index: 100;
+	transition: top 5s ease-in-out;
 }
 
 .skip-link:focus {
-    top: 0; /* Updated to bring the link into view when focused */
+	top: 0;
+	/* Updated to bring the link into view when focused */
 }
 
 /* Navigation Bar */
-header{
-	position: sticky; /* Changed to sticky for better navigation */
-	top: 0; /* Positioned at the top */
-	z-index: 100; /* Increased z-index to ensure it's above all other elements */
-	border: solid white 2px; /* Added border for visual separation */
+header {
+	position: sticky;
+	/* Changed to sticky for better navigation */
+	top: 0;
+	/* Positioned at the top */
+	z-index: 100;
+	/* Increased z-index to ensure it's above all other elements */
+	border: solid white 2px;
+	/* Added border for visual separation */
 }
 
 nav {
-    background: #73a8e0;
-    padding: 0.5rem 0; /* Adjusted padding for better spacing */
+	background: #73a8e0;
+	padding: 0.5rem 0;
+	/* Adjusted padding for better spacing */
 }
 
 ul {
-    display: flex;
-    justify-content: center; /* Centered nav items */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+	display: flex;
+	justify-content: center;
+	/* Centered nav items */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
-li a {
-    color: white;
-    padding: 14px 20px; /* Increased padding for larger clickable area */
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.2rem; /* Adjusted font size for readability */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+nav ul li a {
+	color: white;
+	padding: 14px 20px;
+	/* Increased padding for larger clickable area */
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2rem;
+	/* Adjusted font size for readability */
+	transition: background-color 0.3s ease;
+	/* Smooth transition for hover effect */
 }
 
-li:first-child {
-    margin-right: auto; /* Adjusted to ensure the first item aligns left */
+
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a.active {
+	background: #538ab0;
+	/* Lightened background on hover/focus for contrast */
+	text-decoration: underline;
+	/* Added underline for better indication of interactivity */
+	border-radius: 4px;
+	/* Rounded corners for aesthetic */
+	font-weight: bold;
 }
 
-li:not(:first-child) {
-    border-left: 2px solid white; /* Added border to non-first items for visual separation */
-}
 
-li a:hover, li a:focus, li a.active {
-    background: #538ab0; /* Lightened background on hover/focus for contrast */
-    text-decoration: underline; /* Added underline for better indication of interactivity */
-    border-radius: 4px; /* Rounded corners for aesthetic */
+ol{
+	justify-content: center;
 }
 
 /* Headings and Text */
-h1, h2, h3, h4 {
-    font-weight: bold;
-    margin: 1rem 0; /* Standardized margin for visual consistency */
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+	margin: 1rem 0;
+	/* Standardized margin for visual consistency */
 }
 
 h1 {
-    font-size: 2.5rem; /* Made primary heading larger for emphasis */
+	font-size: 1.5rem;
+	/* Made primary heading larger for emphasis */
 }
 
 h2 {
-    font-size: 2rem;
+	font-size: 1.2rem;
 }
 
 h3 {
-    font-size: 1.75rem;
+	font-size: 1rem;
 }
 
-/* Main Components Styling */
-footer, main {
-    background-color: #73a8e0;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px; /* Added margin-top for spacing */
+h4{
+	font-size: 0.9rem;
+
 }
+/* Main Components Styling */
+footer,
+main {
+	background-color: #73a8e0;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+	/* Added margin-top for spacing */
+	list-style-position: inside;
+
+}
+
 
 /* Media Elements */
-img, video {
-    max-width: 100%; /* Ensured max-width for responsiveness */
-    height: auto;
-    border-radius: 8px; /* Softened border radius */
-    border: 3px solid white; /* Standardized border */
-    margin: 20px 0; /* Added margin for spacing */
+img,
+video {
+	width: 500px;
+	/* Ensured max-width for responsiveness */
+	height: auto;
+	border-radius: 8px;
+	/* Softened border radius */
+	border: 3px solid white;
+	/* Standardized border */
+	margin: 20px 0;
+	/* Added margin for spacing */
 	text-align: center;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+	grid-gap: 20px;
+	/* border: 2px dashed rgb(255, 255, 255); */
+	width: 100%;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.gallery img,
+.gallery video {
+	width: auto;
+	height: auto;
+	/* object-fit: cover; */
+}
+
+/* Define a class for list default settings */
+.my-list {
+	display: grid;
+	/* list-style-type: disc; */
+	/* Set the list item marker to a filled circle (for unordered lists) */
+	list-style-position: inside;
+	margin-left: 1%;
+	/* Remove default margin */
+	padding: 0;
+	/* Remove default padding */
+}
+
+.my-list li, p{
+	text-align: left;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
+	nav ul {
+		flex-direction: column;
+	}
 
-    nav ul li a {
-        width: 100%;
-        padding: 10px; /* Adjusted padding for touch targets */
-    }
+	nav ul li a {
+		width: 100%;
+		padding: 10px;
+		/* Adjusted padding for touch targets */
+	}
 
-    li a {
-        font-size: 1rem; /* Adjusted font size for space efficiency */
-    }
+	li a {
+		font-size: 1rem;
+		/* Adjusted font size for space efficiency */
+	}
 
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    }
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+		grid-gap: 20px;
+		/* border: 2px dashed rgb(255, 255, 255); */
+		width: 100%;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	.grid-container {
+		grid-template-columns: 1fr;
+		/* Single column layout for smaller screens */
+	}
 }
 
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none;
-        transition: none;
-    }
+	* {
+		animation: none;
+		transition: none;
+	}
 }
