@@ -15,10 +15,10 @@ body {
 .skip-link {
 	position: fixed;
 	/* Changed to fixed to ensure visibility */
-	top: 0px;
+	top: -50px;
 	/* Adjusted for better off-screen positioning */
 	left: 0;
-	background-color: #ffffff;
+	background-color: #73a8e0;
 	color: #fff;
 	padding: 8px;
 	z-index: 100;
@@ -26,7 +26,7 @@ body {
 }
 
 .skip-link:focus {
-	top: 0;
+	top: 10px;
 	/* Updated to bring the link into view when focused */
 }
 
@@ -104,15 +104,15 @@ h1 {
 }
 
 h2 {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 }
 
 h3 {
-	font-size: 1rem;
+	font-size: 1.1rem;
 }
 
 h4{
-	font-size: 0.9rem;
+	font-size: rem;
 
 }
 /* Main Components Styling */
@@ -172,7 +172,7 @@ p {
 	/* list-style-type: disc; */
 	/* Set the list item marker to a filled circle (for unordered lists) */
 	list-style-position: inside;
-	margin-left: 1%;
+	/* margin-left: 1%; */
 	/* Remove default margin */
 	padding: 0;
 	/* Remove default padding */
@@ -183,7 +183,7 @@ p {
 }
 
 /* Media Queries */
-@media screen and (min-width: 680px) {
+@media only screen and (max-width: 680px) {
 	/* nav ul {
 		flex-direction: column;
 	} */
@@ -193,7 +193,9 @@ p {
 		padding: 10px;
 		/* Adjusted padding for touch targets */
 	}
-
+	header {
+        border-bottom: 1px solid #ffffff; /* Adjust for smaller screens */
+    }
 	li a {
 		font-size: 1rem;
 		/* Adjusted font size for space efficiency */
@@ -202,12 +204,9 @@ p {
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
-		grid-gap: 20px;
-		/* border: 2px dashed rgb(255, 255, 255); */
-		width: 100%;
-		justify-content: center;
-		align-items: stretch;
+
 	}
+
 
 	.my-list li{
 		flex-direction: column;
